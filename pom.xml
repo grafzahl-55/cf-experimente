@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.escriba.experimental.cf</groupId>
+    <artifactId>cf-build</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+
+    <url>https://github.com/grafzahl-55/cf-experimente</url>
+    <description>
+        Experimente mit SpringBoot und Cloudfoundry
+    </description>
+	
+
+    <modules>
+			<module>sbs</module>
+    </modules>
+
+    <properties>
+        <maven.scm.plugin.version>1.9.5</maven.scm.plugin.version>
+    </properties>
+	
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>${maven.scm.plugin.version}</version>
+                <configuration>
+                    <tag>${project.artifactId}-${project.version}-release</tag>
+                    <branch>${project.artifactId}-${project.version}-branch</branch>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <scm>
+        <url>https://github.com/grafzahl-55/cf-experimente</url>
+        <developerConnection>scm:git:https://github.com/grafzahl-55/cf-experimente</developerConnection>
+    </scm>
+
+</project>
