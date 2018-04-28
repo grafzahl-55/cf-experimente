@@ -1,0 +1,19 @@
+## YAML Template.
+---
+spring:
+  application:
+    name: "@project,artifactId@"
+
+  data:
+    rest:
+      base-path: /api
+
+
+  flyway:
+    enabled: false
+    locations: db/migrations/{vendor}
+
+
+  jpa:
+    generate-ddl: true
+    show-sql: true

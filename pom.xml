@@ -14,7 +14,7 @@
 	
 
     <modules>
-			<module>sbs</module>
+			<module>cdr</module>
     </modules>
 
     <properties>
