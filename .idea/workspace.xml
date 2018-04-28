@@ -2,30 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d5d82b1-8a01-4934-9517-3a1eede4f1ef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/SbsApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/datasource/DefaultDataSourceConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/model/FileInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/model/FolderInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/model/TagValue.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/repository/FileInfoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/repository/FolderInfoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/repository/TagRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/java/de/escriba/experimental/cf/sbs/repository/TagService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/main/resources/db/migrations/h2/V1_1__Initial.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sbs/src/test/java/de/escriba/experimental/cf/sbs/SbsApplicationTests.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cdr/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -94,8 +96,8 @@
       <file leaf-file-name="ContextDefinitionResourceProcessor.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            <state relative-caret-position="506">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -948,8 +950,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="506">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
