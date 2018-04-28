@@ -1,34 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d5d82b1-8a01-4934-9517-3a1eede4f1ef" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="9d5d82b1-8a01-4934-9517-3a1eede4f1ef" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cdr/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -589,6 +562,21 @@
       <option name="presentableId" value="Default" />
       <updated>1524915688157</updated>
     </task>
+    <task id="LOCAL-00001" summary="Von IDE">
+      <created>1524945062603</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1524945062603</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Von IDE">
+      <created>1524945219452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524945219452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -625,21 +613,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" weight="0.33769062" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32897604" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.40413943" />
       <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32995737" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49891067" visible="true" weight="0.18443497" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49837664" visible="true" weight="0.18443497" />
       <window_info id="Learn" order="2" />
-      <window_info id="Structure" order="1" sideWeight="0.50108933" side_tool="true" visible="true" weight="0.18443497" />
+      <window_info id="Structure" order="1" sideWeight="0.5016234" side_tool="true" visible="true" weight="0.18443497" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5015674" side_tool="true" weight="0.18443497" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30501089" />
@@ -653,6 +640,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Von IDE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Von IDE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
