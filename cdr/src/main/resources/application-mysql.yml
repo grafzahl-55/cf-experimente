@@ -1,0 +1,7 @@
+## YAML Template.
+---
+datasource:
+  mysql:
+    url: jdbc:mysql://outerspace/cdrdb
+    user: cdruser
+    password: cdrpass

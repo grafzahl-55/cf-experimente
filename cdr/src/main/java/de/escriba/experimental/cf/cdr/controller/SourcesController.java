@@ -1,5 +1,6 @@
 package de.escriba.experimental.cf.cdr.controller;
 
+import de.escriba.experimental.cf.cdr.CdrApplication;
 import de.escriba.experimental.cf.cdr.model.ContextDefinitionEntity;
 import de.escriba.experimental.cf.cdr.model.ContextSourceEntity;
 import de.escriba.experimental.cf.cdr.repository.ContextDefinitionRepository;
@@ -21,7 +22,7 @@ public class SourcesController {
         this.repository = repository;
     }
 
-    @GetMapping("/sources/{id}/{role}")
+    @GetMapping(CdrApplication.URL_PATTERN_SOURCES)
     @Transactional
     public ResponseEntity<byte[]> downloadSource(@PathVariable Long id, @PathVariable String role) {
         Optional<ContextDefinitionEntity> contextEntityOpt = repository.findById(id);
@@ -38,7 +39,7 @@ public class SourcesController {
         return new ResponseEntity<byte[]>(new byte[0], HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping(value="/sources/{id}/{role}",consumes = MediaType.ALL_VALUE)
+    @PutMapping(value=CdrApplication.URL_PATTERN_SOURCES,consumes = MediaType.ALL_VALUE)
     @Transactional
     public ResponseEntity<String> uploadSource(@PathVariable Long id,
                                                @PathVariable String role, @RequestBody byte[] data,
@@ -63,7 +64,7 @@ public class SourcesController {
         return new ResponseEntity<>("", HttpStatus.NOT_FOUND);
     }
 
-    @DeleteMapping(value="/sources/{id}/{role}")
+    @DeleteMapping(value=CdrApplication.URL_PATTERN_SOURCES)
     @Transactional
     public ResponseEntity<String> deleteSource(@PathVariable Long id,
                                                @PathVariable String role) {

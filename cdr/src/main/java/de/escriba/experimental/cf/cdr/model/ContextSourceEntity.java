@@ -2,15 +2,19 @@ package de.escriba.experimental.cf.cdr.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
+import java.util.Date;
 
 
 @Entity
 @Data
-public class ContextSourceEntity {
-    @Id @GeneratedValue
-    private Long id;
+@EntityListeners(AuditingEntityListener.class)
+@Table(name="CONTEXT_SOURCE")
+public class ContextSourceEntity extends BaseEntity<ContextSourceEntity>{
 /*
     @ManyToOne
     private ContextDefinitionEntity parent;
@@ -20,6 +24,7 @@ public class ContextSourceEntity {
 
     @Column(length = 128)
     private String contentType;
+
 
     @JsonIgnore
     @Lob
@@ -39,4 +44,9 @@ public class ContextSourceEntity {
         return this;
     }
 
+
+    @Override
+    protected ContextSourceEntity self() {
+        return this;
+    }
 }

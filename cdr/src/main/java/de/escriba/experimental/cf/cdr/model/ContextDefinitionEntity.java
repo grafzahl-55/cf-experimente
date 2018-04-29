@@ -1,12 +1,13 @@
 package de.escriba.experimental.cf.cdr.model;
 
 import lombok.Data;
-import lombok.experimental.Accessors;
+import lombok.ToString;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import javax.persistence.*;
 
 /**
  *
@@ -14,29 +15,39 @@ import javax.persistence.*;
  */
 @Data
 @Entity
-public class ContextDefinitionEntity{
+@EntityListeners(AuditingEntityListener.class)
+@Table(name = "CONTEXT_DEFINITION",indexes = {
+        @Index(columnList = "serviceType"),
+        @Index(columnList = "contextName",unique = true)
+})
+@ToString(of = {"contextName","serviceType"})
+public class ContextDefinitionEntity extends BaseEntity<ContextDefinitionEntity>{
 
-    @GeneratedValue @Id
-    private Long id;
+
+    @Column(length = 255, nullable = false)
+    private String contextName;
 
     @Column(length = 64, nullable = false)
     private String serviceType;
     
-    @Column(length=1024, nullable = true)
-    private String description;
-    
+
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> tags=new ArrayList<>();
 
+
+
     @OneToMany(targetEntity = ContextSourceEntity.class, cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ContextSourceEntity> sources=new ArrayList<>();
+
+    @OneToMany(targetEntity = ContextDeploymentEntity.class, mappedBy = "contextDefinition")
+    private List<ContextDeploymentEntity> deployedTo;
 
     public ContextDefinitionEntity serviceType(String serviceType){
         this.setServiceType(serviceType);
         return this;
     }
-    public ContextDefinitionEntity description(String description) {
-        this.setDescription(description);
+    public ContextDefinitionEntity name(String name){
+        this.setContextName(name);
         return this;
     }
     public ContextDefinitionEntity tags(String... tags){
@@ -63,5 +74,10 @@ public class ContextDefinitionEntity{
             }
         }
         return null;
+    }
+
+    @Override
+    protected ContextDefinitionEntity self() {
+        return this;
     }
 }

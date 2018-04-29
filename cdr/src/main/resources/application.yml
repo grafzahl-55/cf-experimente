@@ -2,7 +2,7 @@
 ---
 spring:
   application:
-    name: "@project,artifactId@"
+    name: "@project.artifactId@"
 
   data:
     rest:
@@ -10,10 +10,25 @@ spring:
 
 
   flyway:
-    enabled: false
-    locations: db/migrations/{vendor}
+    enabled: true
+    locations: classpath:db/migrations/{vendor}
 
 
   jpa:
-    generate-ddl: true
+    generate-ddl: false
     show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+info:
+  application:
+    name: "@project.artifactId@"
+    version: "@project.version@"
+    description: "@project.description@"
+    build-date: "@build.date@"
+
+
