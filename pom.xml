@@ -24,6 +24,7 @@
 
     <modules>
         <module>cdr</module>
+        <module>cf-lib</module>
     </modules>
 
     <properties>

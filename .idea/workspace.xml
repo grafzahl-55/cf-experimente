@@ -1,45 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d5d82b1-8a01-4934-9517-3a1eede4f1ef" name="Default" comment="Benutze automatische Spring Datasource Config. sowohlf ür Test als auch für MySQL">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="9d5d82b1-8a01-4934-9517-3a1eede4f1ef" name="Default" comment="Utility für Taggong und Tag-Match">
+      <change afterPath="$PROJECT_DIR$/cf-lib/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/TagMatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/Tagged.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/TaggedSupport.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TagMatcherTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TaggedSupportTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/MysqlDataSourceConfiguration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDeploymentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDeploymentEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ApplicationInstanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ApplicationInstanceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDeploymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDeploymentRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/banner.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cdr/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/cf-lib/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,11 +33,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UploadDownloadTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cf-lib/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaggedSupportTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TaggedSupportTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1286">
+              <caret line="79" column="38" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1462#1463#0" expanded="true" />
+                <element signature="e#1510#1511#0" expanded="true" />
+                <element signature="e#1698#1699#0" expanded="true" />
+                <element signature="e#1747#1748#0" expanded="true" />
+                <element signature="e#1806#1807#0" expanded="true" />
+                <element signature="e#1857#1858#0" expanded="true" />
+                <element signature="e#1923#1924#0" expanded="true" />
+                <element signature="e#1972#1973#0" expanded="true" />
+                <element signature="e#2045#2046#0" expanded="true" />
+                <element signature="e#2094#2095#0" expanded="true" />
+                <element signature="e#2168#2169#0" expanded="true" />
+                <element signature="e#2214#2215#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TagMatcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/TagMatcher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="186">
-              <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
+              <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +78,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationInstanceEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java">
+      <file leaf-file-name="TagMatcherTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TagMatcherTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="230">
+              <caret line="116" column="36" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3011#3012#0" expanded="true" />
+                <element signature="e#3041#3042#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Tagged.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/Tagged.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="296">
+              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -81,90 +104,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CdrApplicationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="122" column="86" selection-start-line="122" selection-start-column="86" selection-end-line="122" selection-end-column="86" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="345">
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java">
+      <file leaf-file-name="TaggedSupport.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/TaggedSupport.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+            <state relative-caret-position="-176">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SourcesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextDefinitionResourceProcessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="318">
-              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="maven-wrapper.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="ContextDefinitionEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContextSourceEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#330#331#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#991#992#0" expanded="true" />
+                <element signature="e#1030#1031#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -175,8 +135,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -225,6 +185,16 @@
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" />
         <option value="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/TaggSupportTest.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/TagSupport.java" />
+        <option value="$PROJECT_DIR$/cf-lib/pom.xml" />
+        <option value="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/Tagged.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/TaggedSupport.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/TaggedSupportTest.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TaggedSupportTest.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/TagMatcher.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/Tagged.java" />
+        <option value="$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TagMatcherTest.java" />
       </list>
     </option>
   </component>
@@ -244,7 +214,7 @@
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
@@ -271,24 +241,65 @@
               <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
               <item name="cdr" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
               <item name="cdr" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
               <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
+              <item name="cf-lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
+              <item name="cf-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
+              <item name="cf-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
+              <item name="cf-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
+              <item name="cf-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="tags" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
+              <item name="cf-lib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
+              <item name="cf-lib" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -412,7 +423,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_directory_selection" value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/cdr" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -420,6 +431,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.toDoOptions" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.escriba.experimental.cflib.tags" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="de.escriba.experimental.cf.cdr.repository" />
     </key>
@@ -439,7 +453,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.CdrApplication- Mysql Profile">
+  <component name="RunManager" selected="JUnit.TagMatcherTest">
     <configuration name="CdrApplication- Mysql Profile" type="Application" factoryName="Application">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
       <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.CdrApplication" />
@@ -455,29 +469,6 @@
     <configuration default="true" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.CdrApplication" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="CdrApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cdr" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.escriba.experimental.cf.cdr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.escriba.experimental.cf.cdr" />
-      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.CdrApplicationTests" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
     </configuration>
     <configuration name="CdrApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="cdr" />
@@ -525,29 +516,6 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="CdrApplicationTests.saveEntityAndExpectItCanBeLoaded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cdr" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.escriba.experimental.cf.cdr.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.escriba.experimental.cf.cdr" />
-      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.CdrApplicationTests" />
-      <option name="METHOD_NAME" value="saveEntityAndExpectItCanBeLoaded" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
     <configuration name="CdrApplicationTests.saveEntityWithSourcesAndExpectThemToBeLoaded" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="cdr" />
       <extension name="coverage">
@@ -571,19 +539,19 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UploadDownloadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cdr" />
+    <configuration name="TagMatcherTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cf-lib" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.escriba.experimental.cf.cdr.*" />
+          <option name="PATTERN" value="de.escriba.experimental.cflib.tags.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.escriba.experimental.cf.cdr" />
-      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.UploadDownloadTest" />
-      <option name="METHOD_NAME" />
+      <option name="PACKAGE_NAME" value="de.escriba.experimental.cflib.tags" />
+      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cflib.tags.TagMatcherTest" />
+      <option name="METHOD_NAME" value="schouldFailWithNullAsFirstArgument" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -594,20 +562,66 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="UploadDownloadTest.downloadEnvAndExpectENV" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="cdr" />
+    <configuration name="TagMatcherTest.schouldFailWithNullAsFirstArgument" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cf-lib" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.escriba.experimental.cf.cdr.*" />
+          <option name="PATTERN" value="de.escriba.experimental.cflib.tags.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="de.escriba.experimental.cf.cdr" />
-      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.UploadDownloadTest" />
-      <option name="METHOD_NAME" value="downloadEnvAndExpectENV" />
+      <option name="PACKAGE_NAME" value="de.escriba.experimental.cflib.tags" />
+      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cflib.tags.TagMatcherTest" />
+      <option name="METHOD_NAME" value="schouldFailWithNullAsFirstArgument" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TagMatcherTest.shouldScoreReturnZeroOnEMptyTags" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cf-lib" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.escriba.experimental.cflib.tags.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.escriba.experimental.cflib.tags" />
+      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cflib.tags.TagMatcherTest" />
+      <option name="METHOD_NAME" value="shouldScoreReturnZeroOnEMptyTags" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="TaggedSupportTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="cf-lib" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.escriba.experimental.cflib.tags.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="de.escriba.experimental.cflib.tags" />
+      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cflib.tags.TaggedSupportTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -682,19 +696,19 @@
       <item itemvalue="Application.CdrApplication- Mysql Profile" />
       <item itemvalue="JUnit.CdrApplicationTests.contextLoads" />
       <item itemvalue="JUnit.CdrApplicationTests.saveEntityWithSourcesAndExpectThemToBeLoaded" />
-      <item itemvalue="JUnit.UploadDownloadTest" />
-      <item itemvalue="JUnit.CdrApplicationTests" />
       <item itemvalue="JUnit.CdrApplicationTests.saveAndDeleteEntityAndExpectItCannotBeFound" />
-      <item itemvalue="JUnit.CdrApplicationTests.saveEntityAndExpectItCanBeLoaded" />
-      <item itemvalue="JUnit.UploadDownloadTest.downloadEnvAndExpectENV" />
+      <item itemvalue="JUnit.TaggedSupportTest" />
+      <item itemvalue="JUnit.TagMatcherTest.schouldFailWithNullAsFirstArgument" />
+      <item itemvalue="JUnit.TagMatcherTest" />
+      <item itemvalue="JUnit.TagMatcherTest.shouldScoreReturnZeroOnEMptyTags" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TagMatcherTest" />
+        <item itemvalue="JUnit.TagMatcherTest.shouldScoreReturnZeroOnEMptyTags" />
+        <item itemvalue="JUnit.TagMatcherTest.schouldFailWithNullAsFirstArgument" />
+        <item itemvalue="JUnit.TaggedSupportTest" />
         <item itemvalue="JUnit.CdrApplicationTests.saveAndDeleteEntityAndExpectItCannotBeFound" />
-        <item itemvalue="JUnit.CdrApplicationTests" />
-        <item itemvalue="JUnit.CdrApplicationTests.saveEntityAndExpectItCanBeLoaded" />
-        <item itemvalue="JUnit.UploadDownloadTest" />
-        <item itemvalue="JUnit.UploadDownloadTest.downloadEnvAndExpectENV" />
       </list>
     </recent_temporary>
   </component>
@@ -723,39 +737,46 @@
       <option name="project" value="LOCAL" />
       <updated>1524945219452</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Benutze automatische Spring Datasource Config. sowohlf ür Test als auch für MySQL">
+      <created>1525086446026</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525086446026</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UploadDownloadTest - 2018.04.29 at 17h 32m 23s.xml">
-      <configuration name="UploadDownloadTest" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest_schouldFailWithNullAsFirstArgument - 2018.04.30 at 15h 13m 38s.xml">
+      <configuration name="TagMatcherTest.schouldFailWithNullAsFirstArgument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests_contextLoads - 2018.04.29 at 17h 32m 50s.xml">
-      <configuration name="CdrApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest_schouldFailWithNullAsFirstArgument - 2018.04.30 at 15h 16m 28s.xml">
+      <configuration name="TagMatcherTest.schouldFailWithNullAsFirstArgument" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests_contextLoads - 2018.04.29 at 17h 36m 53s.xml">
-      <configuration name="CdrApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest - 2018.04.30 at 15h 17m 09s.xml">
+      <configuration name="TagMatcherTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests - 2018.04.29 at 17h 42m 37s.xml">
-      <configuration name="CdrApplicationTests" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest - 2018.04.30 at 15h 32m 22s.xml">
+      <configuration name="TagMatcherTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests_saveEntityAndExpectItCanBeLoaded - 2018.04.29 at 17h 45m 05s.xml">
-      <configuration name="CdrApplicationTests.saveEntityAndExpectItCanBeLoaded" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest_shouldScoreReturnZeroOnEMptyTags - 2018.04.30 at 15h 33m 24s.xml">
+      <configuration name="TagMatcherTest.shouldScoreReturnZeroOnEMptyTags" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests - 2018.04.29 at 17h 45m 27s.xml">
-      <configuration name="CdrApplicationTests" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest - 2018.04.30 at 15h 33m 30s.xml">
+      <configuration name="TagMatcherTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests_contextLoads - 2018.04.29 at 18h 31m 01s.xml">
-      <configuration name="CdrApplicationTests.contextLoads" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest - 2018.04.30 at 15h 34m 39s.xml">
+      <configuration name="TagMatcherTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests - 2018.04.29 at 18h 45m 27s.xml">
-      <configuration name="CdrApplicationTests" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest - 2018.04.30 at 15h 54m 30s.xml">
+      <configuration name="TagMatcherTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests_saveAndDeleteEntityAndExpectItCannotBeFound - 2018.04.29 at 18h 46m 09s.xml">
-      <configuration name="CdrApplicationTests.saveAndDeleteEntityAndExpectItCannotBeFound" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest - 2018.04.30 at 15h 54m 51s.xml">
+      <configuration name="TagMatcherTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CdrApplicationTests_saveAndDeleteEntityAndExpectItCannotBeFound - 2018.04.29 at 18h 47m 40s.xml">
-      <configuration name="CdrApplicationTests.saveAndDeleteEntityAndExpectItCannotBeFound" configurationId="JUnit" />
+    <history-entry file="TagMatcherTest - 2018.04.30 at 15h 55m 09s.xml">
+      <configuration name="TagMatcherTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -769,23 +790,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.33769062" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.33769062" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="4" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32897604" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31808278" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.37254903" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7284345" visible="true" weight="0.18869936" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
-      <window_info id="Learn" order="2" />
+      <window_info id="Learn" order="4" />
       <window_info id="Structure" order="1" sideWeight="0.26948053" side_tool="true" weight="0.18656716" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.2715655" side_tool="true" weight="0.18869936" />
+      <window_info id="Favorites" order="3" sideWeight="0.2715655" side_tool="true" weight="0.18869936" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30501089" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32995737" />
@@ -801,7 +821,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Von IDE" />
     <MESSAGE value="Benutze automatische Spring Datasource Config. sowohlf ür Test als auch für MySQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Benutze automatische Spring Datasource Config. sowohlf ür Test als auch für MySQL" />
+    <MESSAGE value="Utility für Taggong und Tag-Match" />
+    <option name="LAST_COMMIT_MESSAGE" value="Utility für Taggong und Tag-Match" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,66 +843,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1210">
-          <caret line="55" lean-forward="true" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.20/lombok-1.16.20-sources.jar!/lombok/extern/slf4j/Slf4j.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/assertj/assertj-core/3.9.1/assertj-core-3.9.1.jar!/org/assertj/core/api/Assertions.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2182">
-          <caret line="116" column="69" selection-start-line="116" selection-start-column="69" selection-end-line="116" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.20/lombok-1.16.20-sources.jar!/lombok/Data.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.20/lombok-1.16.20-sources.jar!/lombok/Builder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-777">
@@ -985,13 +946,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-552">
           <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -1200,6 +1154,94 @@
           <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1584" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf-lib/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="23" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TaggedSupportTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1286">
+          <caret line="79" column="38" selection-start-line="79" selection-start-column="12" selection-end-line="79" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1462#1463#0" expanded="true" />
+            <element signature="e#1510#1511#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1857#1858#0" expanded="true" />
+            <element signature="e#1923#1924#0" expanded="true" />
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2045#2046#0" expanded="true" />
+            <element signature="e#2094#2095#0" expanded="true" />
+            <element signature="e#2168#2169#0" expanded="true" />
+            <element signature="e#2214#2215#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/TaggedSupport.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-176">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#330#331#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#991#992#0" expanded="true" />
+            <element signature="e#1030#1031#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/TagMatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="19" column="4" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf-lib/src/main/java/de/escriba/experimental/cflib/tags/Tagged.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cf-lib/src/test/java/de/escriba/experimental/cflib/tags/TagMatcherTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="116" column="36" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3011#3012#0" expanded="true" />
+            <element signature="e#3041#3042#0" expanded="true" />
           </folding>
         </state>
       </provider>
