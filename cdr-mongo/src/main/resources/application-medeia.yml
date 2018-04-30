@@ -1,0 +1,8 @@
+# Profil fü Verbindung zur lokalen MongoDB auf medeia
+spring:
+  data:
+    mongodb:
+      database: CDRRepo
+      grid-fs-database: CDRFiles
+      host: medeia
+# eh STandard.      port: 27017

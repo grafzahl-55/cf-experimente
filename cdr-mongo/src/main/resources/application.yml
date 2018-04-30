@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: "@project.artifactId@"
+
+  data:
+    rest:
+      base-path: /api
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

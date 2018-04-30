@@ -25,6 +25,7 @@
     <modules>
         <module>cdr</module>
         <module>cf-lib</module>
+        <module>cdr-mongo</module>
     </modules>
 
     <properties>
