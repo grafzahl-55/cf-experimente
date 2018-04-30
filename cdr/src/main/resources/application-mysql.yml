@@ -1,7 +1,9 @@
-## YAML Template.
+# Datasource Config for profile mysql
 ---
-datasource:
-  mysql:
+spring:
+  datasource:
+    name: mysql-cdr
     url: jdbc:mysql://outerspace/cdrdb
-    user: cdruser
+    username: cdrdb
     password: cdrpass
+    driver-class-name: com.mysql.jdbc.Driver

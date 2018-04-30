@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d5d82b1-8a01-4934-9517-3a1eede4f1ef" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/MysqlDataSourceConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDeploymentEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ApplicationInstanceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDeploymentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql" afterDir="false" />
+    <list default="true" id="9d5d82b1-8a01-4934-9517-3a1eede4f1ef" name="Default" comment="Benutze automatische Spring Datasource Config. sowohlf ür Test als auch für MySQL">
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
@@ -26,13 +18,22 @@
       <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/MysqlDataSourceConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDeploymentEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDeploymentEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ApplicationInstanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ApplicationInstanceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDeploymentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDeploymentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/banner.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/banner.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
@@ -56,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UploadDownloadTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UploadDownloadTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+            <state relative-caret-position="186">
+              <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,20 +69,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/resources/application.yml">
+      <file leaf-file-name="ApplicationInstanceEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="186">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CdrApplicationTests.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CdrApplicationTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="186">
+              <caret line="122" column="86" selection-start-line="122" selection-start-column="86" selection-end-line="122" selection-end-column="86" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -92,8 +96,8 @@
       <file leaf-file-name="DataInitializer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="516">
+              <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,11 +105,67 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="V1_1__Initial.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql">
+      <file leaf-file-name="SourcesController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="85" column="118" selection-start-line="85" selection-start-column="118" selection-end-line="85" selection-end-column="118" />
+            <state relative-caret-position="186">
+              <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContextDefinitionResourceProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="maven-wrapper.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="ContextDefinitionEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContextSourceEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -140,30 +200,31 @@
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContentSourceResouceAssempler.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContentSourceRepository.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextSourceRepository.java" />
-        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" />
-        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/cdr/src/main/resources/banner.txt" />
-        <option value="$PROJECT_DIR$/cdr/pom.xml" />
-        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/MysqlDataSourceConfiguration.java" />
-        <option value="$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DataSourceHealthIndicator.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionRepository.java" />
-        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDeploymentRepository.java" />
-        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationIntanceEntity.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ApplicationInstanceRepository.java" />
-        <option value="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java" />
-        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDeploymentEntity.java" />
         <option value="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/h2/V1_1__Initial.sql" />
         <option value="$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql" />
         <option value="$PROJECT_DIR$/cdr/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/MysqlDataSourceConfiguration.java" />
+        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java" />
+        <option value="$PROJECT_DIR$/cdr/pom.xml" />
+        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java" />
+        <option value="$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml" />
+        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java" />
+        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java" />
         <option value="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java" />
+        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java" />
+        <option value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java" />
+        <option value="$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java" />
       </list>
     </option>
   </component>
@@ -187,17 +248,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cf-build" type="58d84e3e:PackageViewProjectNode" />
-              <item name="cdr" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -215,107 +265,6 @@
               <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
               <item name="cdr" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="datasource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-              <item name="h2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cf-experimente" type="462c0819:PsiDirectoryNode" />
-              <item name="cdr" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-              <item name="mysql" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cf-build" type="b2602c69:ProjectViewProjectNode" />
@@ -449,11 +398,22 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cf-build" type="58d84e3e:PackageViewProjectNode" />
+              <item name="cdr" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/cdr/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/cdr" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -479,9 +439,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CdrApplicationTests.saveAndDeleteEntityAndExpectItCannotBeFound">
+  <component name="RunManager" selected="Application.CdrApplication- Mysql Profile">
+    <configuration name="CdrApplication- Mysql Profile" type="Application" factoryName="Application">
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.CdrApplication" />
+      <module name="cdr" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=mysql" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/cdr" />
+    </configuration>
+    <configuration name="CdrApplication-default profile" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.CdrApplication" />
+      <module name="cdr" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/cdr" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="MAIN_CLASS_NAME" value="de.escriba.experimental.cf.cdr.CdrApplication" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
     <configuration name="CdrApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="cdr" />
@@ -660,6 +633,28 @@
       </option>
       <patterns />
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/cdr" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -683,6 +678,8 @@
       <listeners />
     </configuration>
     <list>
+      <item itemvalue="Application.CdrApplication-default profile" />
+      <item itemvalue="Application.CdrApplication- Mysql Profile" />
       <item itemvalue="JUnit.CdrApplicationTests.contextLoads" />
       <item itemvalue="JUnit.CdrApplicationTests.saveEntityWithSourcesAndExpectThemToBeLoaded" />
       <item itemvalue="JUnit.UploadDownloadTest" />
@@ -761,24 +758,34 @@
       <configuration name="CdrApplicationTests.saveAndDeleteEntityAndExpectItCannotBeFound" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.33769062" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32897604" />
+      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.33769062" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32897604" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31808278" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.37254903" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.37254903" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7305195" visible="true" weight="0.18656716" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7284345" visible="true" weight="0.18869936" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897604" />
       <window_info id="Learn" order="2" />
       <window_info id="Structure" order="1" sideWeight="0.26948053" side_tool="true" weight="0.18656716" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="Favorites" order="2" sideWeight="0.26948053" side_tool="true" weight="0.18656716" />
+      <window_info id="Favorites" order="2" sideWeight="0.2715655" side_tool="true" weight="0.18869936" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.30501089" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="3" side_tool="true" weight="0.32995737" />
@@ -793,14 +800,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Von IDE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Von IDE" />
+    <MESSAGE value="Benutze automatische Spring Datasource Config. sowohlf ür Test als auch für MySQL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Benutze automatische Spring Datasource Config. sowohlf ür Test als auch für MySQL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java</url>
-          <line>60</line>
+          <line>58</line>
           <properties />
           <option name="timeStamp" value="11" />
         </line-breakpoint>
@@ -814,13 +822,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -847,6 +848,8 @@
           <caret line="15" column="16" lean-forward="true" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2055#2056#0" expanded="true" />
+            <element signature="e#2082#2083#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -975,20 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="101" column="40" selection-start-line="101" selection-start-column="40" selection-end-line="101" selection-end-column="40" />
-          <folding>
-            <element signature="e#3850#3851#0" expanded="true" />
-            <element signature="e#3897#3898#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-44">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -996,18 +985,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-552">
           <caret line="127" column="19" selection-start-line="127" selection-start-column="19" selection-end-line="127" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#768#769#0" expanded="true" />
-            <element signature="e#812#813#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1025,69 +1002,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1694">
-          <caret line="77" column="21" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/MysqlDataSourceConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DataSourceHealthIndicator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="10" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1127#1128#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DataSourceHealthIndicator.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/javax/persistence/hibernate-jpa-2.1-api/1.0.0.Final/hibernate-jpa-2.1-api-1.0.0.Final-sources.jar!/javax/persistence/OneToMany.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1122,30 +1037,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1505#1506#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="22" selection-start-line="22" selection-end-line="22" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDeploymentEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -1154,16 +1045,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#190#191#0" expanded="true" />
             <element signature="e#217#218#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1177,32 +1058,106 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cdr/src/main/resources/db/migrations/mysql/V1_1__Initial.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
+        <state relative-caret-position="1870">
           <caret line="85" column="118" selection-start-line="85" selection-start-column="118" selection-end-line="85" selection-end-column="118" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/MysqlDataSourceConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+        <state relative-caret-position="282">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java">
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/datasource/DefaultDataSourceConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="147">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="65" column="27" selection-start-line="65" selection-start-column="27" selection-end-line="65" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/CdrApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/resources/application-mysql.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/.mvn/wrapper/maven-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextDefinitionEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ContextSourceEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/model/ApplicationInstanceEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/repository/ContextDefinitionResourceProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="29" column="56" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1211,8 +1166,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/CdrApplicationTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="186">
+          <caret line="122" column="86" selection-start-line="122" selection-start-column="86" selection-end-line="122" selection-end-column="86" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/controller/SourcesController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="37" column="34" selection-start-line="37" selection-start-column="34" selection-end-line="37" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/main/java/de/escriba/experimental/cf/cdr/DataInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="50" column="35" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cdr/src/test/java/de/escriba/experimental/cf/cdr/UploadDownloadTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="95" column="23" selection-start-line="95" selection-start-column="23" selection-end-line="95" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

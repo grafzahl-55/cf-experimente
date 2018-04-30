@@ -48,7 +48,7 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     @Transactional
-    public void run(String... args) throws Exception {
+    public void run(String... args){
         if( repository.count()==0L ){
             log.info("Leeres Repository vorgefunden: Generiere Testdaten.");
 

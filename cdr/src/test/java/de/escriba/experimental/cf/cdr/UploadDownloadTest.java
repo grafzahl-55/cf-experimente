@@ -48,7 +48,7 @@ public class UploadDownloadTest {
     }
 
     @Test
-    public void downloadEnvAndExpectENV() throws Exception{
+    public void downloadEnvAndExpectENV() {
         String s=rt.getForObject(sourceUrl(id,"env"), String.class);
         assertThat(s).isEqualTo("ENV");
         s=rt.getForObject(sourceUrl(id,"main"), String.class);
@@ -57,7 +57,7 @@ public class UploadDownloadTest {
 
     @Test
     public void downloadUnknownContextAndExpect404(){
-        Long id2=Long.valueOf(20000);
+        Long id2=20000L;
         assertThat(repo.findById(id2).isPresent()).isFalse();
 
         ResponseEntity<String> resp=rt.exchange(sourceUrl(id2,"main"),HttpMethod.GET,new HttpEntity<>(""),String.class);
@@ -93,7 +93,7 @@ public class UploadDownloadTest {
 
     @Test
     public void expextThatDeletUnknownSourceYields404(){
-        Long id2=Long.valueOf(20000);
+        Long id2=20000L;
         assertThat(repo.findById(id2).isPresent()).isFalse();
         ResponseEntity<String> resp=rt.exchange(sourceUrl(id2,"main"),HttpMethod.DELETE,new HttpEntity<>(""),String.class);
         assertThat(resp.getStatusCodeValue()).isEqualTo(404);

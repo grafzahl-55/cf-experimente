@@ -27,10 +27,8 @@ public class ContextDefinitionResourceProcessor implements ResourceProcessor<Res
     @Override
     public Resource<ContextDefinitionEntity> process(Resource<ContextDefinitionEntity> resource) {
 
-        resource.getContent().getSources().forEach(src->{
-            resource.add(linkTo(downloadMethod,resource.getContent().getId(),src.getRole())
-                    .withRel("role-"+src.getRole()));
-        });
+        resource.getContent().getSources().forEach(src-> resource.add(linkTo(downloadMethod,resource.getContent().getId(),src.getRole())
+                .withRel("role-"+src.getRole())));
         return resource;
     }
 }

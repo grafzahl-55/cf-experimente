@@ -32,11 +32,10 @@ public class SourcesController {
                 HttpHeaders hd = new HttpHeaders();
                 hd.setContentType(MediaType.parseMediaType(cse.getContentType()));
                 hd.setContentLength(cse.getSource().length);
-                ResponseEntity<byte[]> resp = new ResponseEntity<>(cse.getSource(), hd, HttpStatus.OK);
-                return resp;
+                return new ResponseEntity<>(cse.getSource(), hd, HttpStatus.OK);
             }
         }
-        return new ResponseEntity<byte[]>(new byte[0], HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(new byte[0], HttpStatus.NOT_FOUND);
     }
 
     @PutMapping(value=CdrApplication.URL_PATTERN_SOURCES,consumes = MediaType.ALL_VALUE)

@@ -19,7 +19,7 @@ import java.util.List;
 })
 @EntityListeners(AuditingEntityListener.class)
 @EqualsAndHashCode(callSuper = true)
-@ToString(of = {"applicationNameName","serviceType","plarform","stage"})
+@ToString(of = {"applicationName","serviceType","platform","stage"})
 public class ApplicationInstanceEntity extends BaseEntity<ApplicationInstanceEntity>{
 
     @Column(length = 128, nullable =    false)

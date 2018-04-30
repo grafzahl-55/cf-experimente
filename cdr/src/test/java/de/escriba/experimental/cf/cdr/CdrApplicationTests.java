@@ -38,9 +38,7 @@ public class CdrApplicationTests {
     @Transactional
     public void contextLoads() {
         log.info("Running...");
-        repo.findAll().forEach(e->{
-            log.info("**** {}",e);
-        });
+        repo.findAll().forEach(e-> log.info("**** {}",e));
     }
 
     @Test
@@ -122,7 +120,7 @@ public class CdrApplicationTests {
         cDef=repo.findById(id).get();
         assertThat(cDef.getSources().size()).isEqualTo(2);
 
-        assertThat(cDef.getSources().stream().map(ContextSourceEntity::getSource).map(data->new String(data))).contains("THE ENV","MAIN CONFIG");
+        assertThat(cDef.getSources().stream().map(ContextSourceEntity::getSource).map(String::new)).contains("THE ENV","MAIN CONFIG");
         assertThat(cDef.getSources().stream().map(ContextSourceEntity::getContentType)).contains("application/xml","text/plain");
 
     }
