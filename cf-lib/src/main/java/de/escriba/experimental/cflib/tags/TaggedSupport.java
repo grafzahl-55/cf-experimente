@@ -10,7 +10,7 @@ public class TaggedSupport<T extends Tagged> implements Tagged<T> {
     final private T outer;
     final private Set<String> tags = new HashSet<>();
 
-    protected TaggedSupport(T outer) {
+    public TaggedSupport(T outer) {
         this.outer = outer;
     }
 

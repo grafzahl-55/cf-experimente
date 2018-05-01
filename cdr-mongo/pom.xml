@@ -50,6 +50,12 @@
         </dependency>
 
         <dependency>
+            <groupId>de.escriba.experimental.cf</groupId>
+            <artifactId>cdr-model</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
