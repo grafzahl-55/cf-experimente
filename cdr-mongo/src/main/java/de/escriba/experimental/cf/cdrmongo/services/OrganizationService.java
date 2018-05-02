@@ -1,9 +1,13 @@
 package de.escriba.experimental.cf.cdrmongo.services;
 
+import de.escriba.experimental.cf.beans.cdr.ExtendedSpaceInfo;
 import de.escriba.experimental.cf.beans.cdr.OrganizationInfo;
+import de.escriba.experimental.cf.beans.cdr.ServiceContainerInfo;
 import de.escriba.experimental.cf.beans.cdr.SpaceInfo;
 import de.escriba.experimental.cf.cdrmongo.exceptions.*;
+import de.escriba.experimental.cf.cdrmongo.model.Converters;
 import de.escriba.experimental.cf.cdrmongo.model.Organization;
+import de.escriba.experimental.cf.cdrmongo.model.ServiceContainer;
 import de.escriba.experimental.cf.cdrmongo.model.Space;
 import de.escriba.experimental.cf.cdrmongo.repository.OrganizationRepository;
 import lombok.RequiredArgsConstructor;
@@ -24,7 +28,7 @@ import java.util.stream.Collectors;
 public class OrganizationService {
 
     private final OrganizationRepository orgRepo;
-
+    private final Converters converters;
 
     public Flux<Organization> findAll() {
         return orgRepo.findAll();
@@ -39,8 +43,8 @@ public class OrganizationService {
 
     public Mono<ObjectId> createOrganization(OrganizationInfo orgInfo) {
         assert orgInfo.getName() != null;
-        Organization org = new Organization(orgInfo.getName(), orgInfo.getDescription())
-                .tag(orgInfo.getTags());
+        Organization org = new Organization(orgInfo.getName());
+        converters.patch(orgInfo, org);
 
         return orgRepo.save(org)
                 .map(o -> o.getId())
@@ -54,8 +58,7 @@ public class OrganizationService {
     public Mono<Organization> updateOrganzation(OrganizationInfo orgInfo) {
         return findOrganizationByName(orgInfo.getName())
                 .flatMap(org -> {
-                    org.setDescription(orgInfo.getDescription());
-                    org.setTags(orgInfo.getTags());
+                    converters.patch(orgInfo, org);
                     return orgRepo.save(org);
                 });
     }
@@ -80,80 +83,155 @@ public class OrganizationService {
                 );
     }
 
-    public Mono<ObjectId> createSpace(String organizationName,SpaceInfo spaceInfo) {
-        assert spaceInfo.getName()!=null;
+    public Mono<ObjectId> createSpace(String organizationName, SpaceInfo spaceInfo) {
+        assert spaceInfo.getName() != null;
         return
                 findOrganizationByName(organizationName)
-                        .flatMap(org->{
-                            if( org.containsSpace(spaceInfo.getName()) ){
+                        .flatMap(org -> {
+                            if (org.containsSpace(spaceInfo.getName())) {
                                 throw new DuplicateSpaceNameException(organizationName, spaceInfo.getName());
                             } else {
-                                org.addSpace(
-                                        new Space(spaceInfo.getName(),spaceInfo.getDescription()).tag(spaceInfo.getTags())
-                                );
+                                Space space = new Space(spaceInfo.getName());
+                                converters.patch(spaceInfo, space);
+                                org.addSpace(space);
                                 return orgRepo.save(org);
                             }
-                        }).map(organization -> {return organization.getId(); });
+                        }).map(organization -> {
+                    return organization.getId();
+                });
 
     }
 
     public Mono<ObjectId> updateSpace(String organizationName, SpaceInfo spaceInfo) {
-        assert spaceInfo.getName()!=null;
+        assert spaceInfo.getName() != null;
         return findOrganizationByName(organizationName)
-                .flatMap(org->{
-                    Space spc=org.getSpaceByName(spaceInfo.getName())
-                            .orElseThrow(()->new SpaceNotFoundException(organizationName, spaceInfo.getName()));
-                    spc.setDescription(spaceInfo.getDescription());
-                    spc.setTags(spaceInfo.getTags());
+                .flatMap(org -> {
+                    Space spc = org.getSpaceByName(spaceInfo.getName())
+                            .orElseThrow(() -> new SpaceNotFoundException(organizationName, spaceInfo.getName()));
+                    converters.patch(spaceInfo, spc);
                     return orgRepo.save(org);
                 }).map(organization -> organization.getId());
 
     }
 
-    public Mono<ObjectId> deleteSpace(String organizationName, String spaceName){
-        assert spaceName!=null;
+    public Mono<ObjectId> deleteSpace(String organizationName, String spaceName) {
+        assert spaceName != null;
         return findOrganizationByName(organizationName)
-                .flatMap(org->{
-                    if(org.containsSpace(spaceName)){
+                .flatMap(org -> {
+                    if (org.containsSpace(spaceName)) {
                         org.removeSpace(spaceName);
                     } else {
                         throw new SpaceNotFoundException(organizationName, spaceName);
                     }
                     return orgRepo.save(org);
-                }).map(org->org.getId());
+                }).map(org -> org.getId());
     }
 
-    public Flux<SpaceInfo> listSpaceInfosForOrganization(String organizationName) {
+    public Flux<ExtendedSpaceInfo> listSpaceInfosForOrganization(String organizationName) {
         return findOrganizationByName(organizationName)
-                .flatMapIterable(OrganizationService::createSpaceInfos);
+                .flatMapIterable(this::createSpaceInfos);
     }
 
-    public Mono<SpaceInfo> getSpaceInfo(String organizationName, String spaceName) {
+    public Mono<ExtendedSpaceInfo> findSpaceInfo(String organizationName, String spaceName) {
         return findOrganizationByName(organizationName)
                 .map(
                         org -> {
                             return org.getSpaceByName(spaceName)
-                                    .map(OrganizationService::createSpaceInfo)
+                                    .map(converters::toExtendedInfo)
                                     .orElseThrow(() -> new SpaceNotFoundException(organizationName, spaceName));
                         }
                 );
     }
 
+    public Mono<ServiceContainerInfo> findServiceContainerInfo(String organizationName, String spaceName, String serviceContainerName) {
+        assert serviceContainerName != null;
+        return findSpaceInfo(organizationName, spaceName)
+                .map(
+                        extendedSpaceInfo -> {
+                            if (extendedSpaceInfo.getServiceContainers() == null ||
+                                    !extendedSpaceInfo.getServiceContainers().containsKey(serviceContainerName)) {
+                                throw new ServiceContainerNotFoundException(organizationName, spaceName, serviceContainerName);
+                            } else {
+                                return extendedSpaceInfo.getServiceContainers().get(serviceContainerName);
+                            }
+                        }
+                );
+    }
 
+    public Mono<ObjectId> createServiceContainer(String organizationName, String spaceName, ServiceContainerInfo scInfo) {
+        assert scInfo.getName() != null;
+        return findOrganizationByName(organizationName)
+                .flatMap(
+                        organization -> {
+                            if (organization.containsSpace(spaceName)) {
+                                Space space = organization.getSpaces().get(spaceName);
+                                if (space.containsServiceContainerName(scInfo.getName())) {
+                                    throw new DuplicateServiceContainerNameException(organizationName, spaceName, scInfo.getName());
+                                } else {
+                                    ServiceContainer sc = new ServiceContainer(scInfo.getName(), scInfo.getServiceType());
+                                    converters.patch(scInfo, sc);
+                                    space.addContainer(sc);
+                                }
+                            } else {
+                                throw new SpaceNotFoundException(organizationName, spaceName);
+                            }
 
-    private static Iterable<? extends SpaceInfo> createSpaceInfos(Organization org) {
+                            return orgRepo.save(organization);
+                        }
+                ).map(o -> o.getId());
+    }
+
+    public Mono<ObjectId> updateServiceContainer(String organizationName, String spaceName, ServiceContainerInfo scInfo) {
+        assert scInfo.getName() != null;
+        return findOrganizationByName(organizationName)
+                .flatMap(
+                        organization -> {
+                            if (organization.containsSpace(spaceName)) {
+                                Space space = organization.getSpaces().get(spaceName);
+                                if (space.containsServiceContainerName(scInfo.getName())) {
+                                    ServiceContainer sc = space.getServiceContainers().get(scInfo.getName());
+                                    converters.patch(scInfo, sc);
+                                } else {
+                                    throw new ServiceContainerNotFoundException(organizationName, spaceName, scInfo.getName());
+                                }
+                            } else {
+                                throw new SpaceNotFoundException(organizationName, spaceName);
+                            }
+
+                            return orgRepo.save(organization);
+                        }
+                ).map(o -> o.getId());
+    }
+
+    public Mono<ObjectId> deleteServiceContainer(String organizationName, String spaceName, String containerName) {
+        assert containerName != null;
+        return findOrganizationByName(organizationName)
+                .flatMap(
+                        organization -> {
+                            if (organization.containsSpace(spaceName)) {
+                                Space space = organization.getSpaces().get(spaceName);
+                                if (space.containsServiceContainerName(containerName)) {
+                                    space.getServiceContainers().remove(containerName);
+                                } else {
+                                    throw new ServiceContainerNotFoundException(organizationName, spaceName, containerName);
+                                }
+                            } else {
+                                throw new SpaceNotFoundException(organizationName, spaceName);
+                            }
+
+                            return orgRepo.save(organization);
+                        }
+                ).map(o -> o.getId());
+    }
+
+    private Iterable<? extends ExtendedSpaceInfo> createSpaceInfos(Organization org) {
         if (org.getSpaces() == null) {
             return Collections.emptyList();
         } else {
             return org.getSpaces().values().stream()
-                    .map(OrganizationService::createSpaceInfo).collect(Collectors.toList());
+                    .map(converters::toExtendedInfo).collect(Collectors.toList());
         }
     }
-
-    private static SpaceInfo createSpaceInfo(Space spc) {
-        return new SpaceInfo(spc.getName(), spc.getDescription()).tag(spc.getTags());
-    }
-
 
 
 }

@@ -1,6 +1,7 @@
 package de.escriba.experimental.cf.cdrmongo.services;
 
 import de.escriba.experimental.cf.beans.cdr.OrganizationInfo;
+import de.escriba.experimental.cf.beans.cdr.ServiceContainerInfo;
 import de.escriba.experimental.cf.beans.cdr.SpaceInfo;
 import de.escriba.experimental.cf.cdrmongo.exceptions.*;
 import de.escriba.experimental.cf.cdrmongo.model.Organization;
@@ -8,9 +9,7 @@ import de.escriba.experimental.cf.cdrmongo.model.ServiceContainer;
 import de.escriba.experimental.cf.cdrmongo.model.Space;
 import de.escriba.experimental.cf.cdrmongo.repository.OrganizationRepository;
 import org.junit.Before;
-import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -206,14 +205,17 @@ public class OrganizationServiceTest {
     }
 
     @Test
-    public void shouldBeAbleToRetrieveSpaceInfo() {
+    public void shouldBeAbleToRetrieveExtendedSpaceInfo() {
         createTestOrganization(true);
         StepVerifier.create(
-                orgService.getSpaceInfo("mu.org", "s2")
+                orgService.findSpaceInfo("mu.org", "s2")
         )
                 .consumeNextWith(spaceInfo -> {
                     assertThat(spaceInfo.getName()).isEqualTo("s2");
                     assertThat(spaceInfo.getTags()).containsExactly("bar");
+                    assertThat(spaceInfo.getServiceContainers()).isNotNull();
+                    assertThat(spaceInfo.getServiceContainers()).isNotEmpty();
+
                 })
                 .verifyComplete();
     }
@@ -222,7 +224,7 @@ public class OrganizationServiceTest {
     public void getSpaceInfoShouldRaiseErrorOnNonExistingSpace() {
         createTestOrganization(true);
         StepVerifier.create(
-                orgService.getSpaceInfo("mu.org", "s77")
+                orgService.findSpaceInfo("mu.org", "s77")
         )
                 .expectError(SpaceNotFoundException.class)
                 .verify();
@@ -231,7 +233,7 @@ public class OrganizationServiceTest {
     @Test
     public void getSpaceInfoShouldRaiseErrorOnNonExistingOrganization() {
         StepVerifier.create(
-                orgService.getSpaceInfo("mu.org-notexisting", "s77")
+                orgService.findSpaceInfo("mu.org-notexisting", "s77")
         )
                 .expectError(OrganizationNotFoundException.class)
                 .verify();
@@ -248,7 +250,7 @@ public class OrganizationServiceTest {
                 })
                 .verifyComplete();
 
-        StepVerifier.create(orgService.getSpaceInfo("mu.org", "newSpace"))
+        StepVerifier.create(orgService.findSpaceInfo("mu.org", "newSpace"))
                 .consumeNextWith(spaceInfo1 -> {
                     assertThat(spaceInfo1.getName()).isEqualTo("newSpace");
                     assertThat(spaceInfo1.getDescription()).isEqualTo("newDescr");
@@ -340,6 +342,179 @@ public class OrganizationServiceTest {
                 .expectError(SpaceNotFoundException.class)
                 .verify();
     }
+
+    @Test
+    public void shouldBeAbleToCreateServiceContainer(){
+        createTestOrganization(true);
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c3","t3","Neuer Container")
+                .tag("DEV");
+
+        StepVerifier.create(
+                orgService.createServiceContainer("mu.org","s1",scInfo)
+        ).consumeNextWith(objectId -> {}).verifyComplete();
+
+        StepVerifier.create(
+                orgService.findSpaceInfo("mu.org","s1")
+        ).consumeNextWith(xSp->{
+            assertThat(xSp.getServiceContainers()).isNotNull();
+            assertThat(xSp.getServiceContainers().size()).isEqualTo(3);
+            ServiceContainerInfo scInf1=xSp.getServiceContainers().get("c3");
+            assertThat(scInf1).isNotNull();
+            assertThat(scInf1.getName()).isEqualTo(scInfo.getName());
+            assertThat(scInf1.getDescription()).isEqualTo(scInfo.getDescription());
+            assertThat(scInf1.getServiceType()).isEqualTo(scInfo.getServiceType());
+            assertThat(scInf1.getTags()).isEqualTo(scInfo.getTags());
+        }).verifyComplete();
+    }
+
+    @Test
+    public void shouldRefuseToCreateServiceContainerInNonExistingOrg(){
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c3","t3","Neuer Container")
+                .tag("DEV");
+
+        StepVerifier.create(
+                orgService.createServiceContainer("mu.org-NICHTDA","s1",scInfo)
+        ).expectError(OrganizationNotFoundException.class).verify();
+
+    }
+
+    @Test
+    public void shouldRefuseToCreateServiceContainerInNonExistingSpace(){
+        createTestOrganization(true);
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c3","t3","Neuer Container")
+                .tag("DEV");
+
+        StepVerifier.create(
+                orgService.createServiceContainer("mu.org","s1-NICHTDA",scInfo)
+        ).expectError(SpaceNotFoundException.class).verify();
+
+    }
+
+    @Test
+    public void shouldRefuseToCreateServiceContainerWIthDuplicateName(){
+        createTestOrganization(true);
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c2","t3","Neuer Container")
+                .tag("DEV");
+
+        StepVerifier.create(
+                orgService.createServiceContainer("mu.org","s1",scInfo)
+        ).expectError(DuplicateServiceContainerNameException.class).verify();
+    }
+
+    @Test
+    public void shouldBeAbleToUpdateServiceContainer(){
+        createTestOrganization(true);
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c2","t3Update","Update Container")
+                .tag("DEV");
+        StepVerifier.create(
+                orgService.updateServiceContainer("mu.org","s1",scInfo)
+        ).consumeNextWith(objectId -> {}).verifyComplete();
+
+        StepVerifier.create(
+                orgService.findSpaceInfo("mu.org","s1")
+        )
+                .consumeNextWith(xSp->{
+                    assertThat(xSp.getServiceContainers()).isNotNull();
+                    ServiceContainerInfo sci=xSp.getServiceContainers().get("c2");
+                    assertThat(sci).isNotNull();
+                    assertThat(sci.getServiceType()).isEqualTo("t3Update");
+                    assertThat(sci.getDescription()).isEqualTo("Update Container");
+                    assertThat(sci.getTags()).containsExactly("DEV");
+                }).verifyComplete();
+
+    }
+
+    @Test
+    public void shouldRefuseToUpdateServiceContainerInNonExistingOrg(){
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c2","t3Update","Update Container")
+                .tag("DEV");
+        StepVerifier.create(
+                orgService.updateServiceContainer("mu.org-XXXXX","s1",scInfo)
+        ).expectError(OrganizationNotFoundException.class).verify();
+
+    }
+
+    @Test
+    public void shouldRefuseToUpdateServiceContainerInNonExistingSpace(){
+        createTestOrganization(true);
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c2","t3Update","Update Container")
+                .tag("DEV");
+        StepVerifier.create(
+                orgService.updateServiceContainer("mu.org","s1XXX",scInfo)
+        ).expectError(SpaceNotFoundException.class).verify();
+
+    }
+
+    @Test
+    public void shouldRefuseToUpdateNonExistingServiceContainer(){
+        createTestOrganization(true);
+        ServiceContainerInfo scInfo=new ServiceContainerInfo("c2XXX","t3Update","Update Container")
+                .tag("DEV");
+        StepVerifier.create(
+                orgService.updateServiceContainer("mu.org","s1",scInfo)
+        ).expectError(ServiceContainerNotFoundException.class).verify();
+
+    }
+
+    public void shouldBeAbleToDeleteServiceContainer(){
+        createTestOrganization(true);
+        StepVerifier.create(
+                orgService.deleteServiceContainer("mu.org","s1","c1")
+        ).consumeNextWith(objectId -> {}).verifyComplete();
+
+        StepVerifier.create(
+                orgService.findSpaceInfo("mu.org","s1")
+        ).consumeNextWith(xSpc->{
+            assertThat(xSpc.getServiceContainers().containsKey("s1")).isFalse();
+            assertThat(xSpc.getServiceContainers().containsKey("s2")).isTrue();
+        }).verifyComplete();
+    }
+
+    @Test
+    public void shouldRefuseToDeleteServiceContainerFromNonExistingOrg(){
+        StepVerifier.create(
+                orgService.deleteServiceContainer("mu.orgXXX","s1","c1")
+        ).expectError(OrganizationNotFoundException.class).verify();
+    }
+
+    @Test
+    public void shouldRefuseToRemoveServiceContainerFromNonExistingSpace(){
+        createTestOrganization(true);
+        StepVerifier.create(
+                orgService.deleteServiceContainer("mu.org","s1XXX","c1")
+        ).expectError(SpaceNotFoundException.class).verify();
+
+    }
+
+    @Test
+    public void shouldRefuseToRemoveNonExistingServiceContainer(){
+        createTestOrganization(true);
+        StepVerifier.create(
+                orgService.deleteServiceContainer("mu.org","s1","c1XXXX")
+        ).expectError(ServiceContainerNotFoundException.class).verify();
+    }
+
+
+    @Test
+    public void shouldBeAbleToLoadServiceContainerInfo(){
+        createTestOrganization(true);
+        StepVerifier.create(
+                orgService.findServiceContainerInfo("mu.org","s2","c1")
+        ).consumeNextWith(sci->{
+            assertThat(sci.getName()).isEqualTo("c1");
+            assertThat(sci.getServiceType()).isEqualTo("type1");
+            assertThat(sci.getTags()).containsExactly("tag1");
+        }).verifyComplete();
+    }
+
+    @Test
+    public void shouldRasieErrorOnServiceContainerNotFound(){
+        createTestOrganization(true);
+        StepVerifier.create(
+                orgService.findServiceContainerInfo("mu.org","s2","c22")
+        ).expectError(ServiceContainerNotFoundException.class).verify();
+    }
+
 
     private void createTestOrganization(boolean withContent) {
         Organization org = new Organization("mu.org", "OLD").tag("OLD");

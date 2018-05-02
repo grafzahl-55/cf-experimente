@@ -2,6 +2,8 @@ package de.escriba.experimental.cf.cdr.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -14,6 +16,9 @@ import java.util.Date;
 @Data
 @EntityListeners(AuditingEntityListener.class)
 @Table(name="CONTEXT_SOURCE")
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+
 public class ContextSourceEntity extends BaseEntity<ContextSourceEntity>{
 /*
     @ManyToOne

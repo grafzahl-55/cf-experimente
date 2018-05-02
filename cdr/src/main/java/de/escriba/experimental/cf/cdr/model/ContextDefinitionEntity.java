@@ -1,6 +1,7 @@
 package de.escriba.experimental.cf.cdr.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -20,7 +21,8 @@ import java.util.List;
         @Index(columnList = "serviceType"),
         @Index(columnList = "contextName",unique = true)
 })
-@ToString(of = {"contextName","serviceType"})
+@ToString(of = {"contextName","serviceType"}, callSuper = true)
+@EqualsAndHashCode(callSuper = true)
 public class ContextDefinitionEntity extends BaseEntity<ContextDefinitionEntity>{
 
 
